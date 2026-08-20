@@ -1,13 +1,112 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-14066",
-    "name": "Kayak_Test",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Inches",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-14066",
+  "name": "Kayak_Test",
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-14067",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Import",
+      "x": 0.3406084656084656,
+      "y": 0.2924791086350975,
+      "uniqueID": "id-14069",
+      "fileName": "halfScaleHalfPly(1).step",
+      "name": "Import",
+      "type": "STEP",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Kayak_Test",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Import",
+      "x": 0.31216931216931215,
+      "y": 0.7715877437325905,
+      "uniqueID": "id-14075",
+      "fileName": "halfScaleEighthPly.step",
+      "name": "Import",
+      "type": "STEP",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Kayak_Test",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Move",
+      "x": 0.48214285714285715,
+      "y": 0.36490250696378834,
+      "uniqueID": "id-14077",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 10,
+          "currentEquation": "10"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.5753968253968255,
+      "y": 0.5793871866295265,
+      "uniqueID": "id-14083",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-14069",
+      "ap2ID": "id-14077"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-14075",
+      "ap2ID": "id-14083"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-14077",
+      "ap2ID": "id-14083"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-14083",
+      "ap2ID": "id-14067"
+    }
+  ],
+  "unitsKey": "Inches",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
